@@ -8,14 +8,14 @@ TEST_USERS = [
         "name": "Kari Nordmann",
         "email": "kari.nordmann@gmail.com",
         "phone": "+47 912 34 567",
-        "ssn": "01019000083",  # Norwegian fødselsnummer
+        "ssn": "01819000049",  # Norwegian fødselsnummer
         "account": "1234 56 78901",  # Bank account
     },
     {
         "name": "Ola Hansen",
         "email": "ola.hansen@outlook.com",
         "phone": "+47 481 23 456",
-        "ssn": "15037800071",
+        "ssn": "15837800037",
         "account": "9876 54 32109",
     },
 ]

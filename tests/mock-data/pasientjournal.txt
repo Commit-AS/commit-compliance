@@ -1,6 +1,6 @@
 Pasientjournal — Intern bruk
 
-Pasient: Kari Nordmann (fnr: 01019000083)
+Pasient: Kari Nordmann (fnr: 01819000049)
 Dato: 2025-11-15
 Behandlende lege: Dr. Eriksen
 

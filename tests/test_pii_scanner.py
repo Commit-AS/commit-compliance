@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "hooks"))
 import pii_scanner
 
 # Valid test fødselsnummer (generated with Modulus 11)
-VALID_FNR = ["01019000083", "15037800071", "28115500009", "01029000073", "30068800036"]
+VALID_FNR = ["01819000049", "15837800037", "28915500074", "01829000039", "30868800182"]
 INVALID_FNR = ["12018945678", "12345678901", "99999999999"]
 
 
@@ -49,6 +49,7 @@ class TestModulus11Validation(unittest.TestCase):
         self.assertTrue(pii_scanner.validate_fnr_date("010190"))
         self.assertTrue(pii_scanner.validate_fnr_date("311299"))
         self.assertTrue(pii_scanner.validate_fnr_date("150378"))
+        self.assertTrue(pii_scanner.validate_fnr_date("018190"))  # synthetic: month + 80
 
     def test_date_validation_invalid(self):
         self.assertFalse(pii_scanner.validate_fnr_date("000190"))

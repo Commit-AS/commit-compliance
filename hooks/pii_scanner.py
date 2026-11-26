@@ -40,14 +40,17 @@ def validate_fnr_checksum(digits):
 
 
 def validate_fnr_date(digits):
-    """Validate date portion of fødselsnummer (supports D-nummer and H-nummer)."""
+    """Validate date portion of fødselsnummer (supports D-nummer, H-nummer and synthetic numbers)."""
     if len(digits) < 6:
         return False
     day = int(digits[0:2])
     month = int(digits[2:4])
-    # D-nummer: day + 40, H-nummer: month + 40
+    # D-nummer: day + 40, H-nummer: month + 40, synthetic test numbers (Skatteetaten's Tenor): month + 80
     real_day = day if day <= 31 else day - 40
-    real_month = month if month <= 12 else month - 40
+    if month > 80:
+        real_month = month - 80
+    else:
+        real_month = month if month <= 12 else month - 40
     return 1 <= real_day <= 31 and 1 <= real_month <= 12
 
 
